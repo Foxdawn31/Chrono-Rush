@@ -23,10 +23,10 @@ public class PlayerControler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 movement = movementAction.ReadValue<Vector2>();
+        Vector3 movement = movementAction.ReadValue<Vector3>();
         Vector3 movementV3 = new Vector3(movement.x, movement.y);
 
-        transform.Translate(movement * Speed);
+        transform.Translate(movementV3 * Speed);
     } 
     void Jump(InputAction.CallbackContext ctx)
     {
